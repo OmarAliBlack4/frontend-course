@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Al-Amana Supermarket Inventory</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+  >
+
+  <link rel="stylesheet" href="./style.css">
+
+  <script src="./main.js" defer></script>
+
+</head>
+
+<body>
+
+  <header class="page-header">
+
+    <h1>Al-Amana Supermarket</h1>
+
+    <nav aria-label="Main navigation">
+      <a href="#products">Inventory</a>
+      <a href="#sales">Record Sale</a>
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <section id="products">
+
+      <h2>Products in Inventory</h2>
+
+      <p>
+        A simple page for the seller to review the products.
+      </p>
+
+      <div class="products-grid">
+
+        <article class="product-card">
+
+          <img
+            src="images/rice.svg"
+            alt="Illustration of a rice package"
+            class="product-card__image"
+          >
+
+          <h3>Rice — 1 kg</h3>
+
+          <div class="product-card__details">
+
+            <p>Sale Price: 45 EGP</p>
+
+            <p>
+              Quantity:
+              <strong id="riceStock">8</strong>
+            </p>
+
+          </div>
+
+          <button
+            type="button"
+            id="riceButton"
+            class="btn btn-success"
+            onclick="sellRice()"
+          >
+            Sell One Unit
+          </button>
+
+        </article>
+
+        <article class="product-card">
+
+          <img
+            src="images/milk.svg"
+            alt="Illustration of a milk package"
+            class="product-card__image"
+          >
+
+          <h3>Milk — 1 Liter</h3>
+
+          <div class="product-card__details">
+
+            <p>Sale Price: 35 EGP</p>
+
+            <p>
+              Quantity:
+              <strong id="milkStock">3</strong>
+            </p>
+
+          </div>
+
+          <button
+            type="button"
+            id="milkButton"
+            class="btn btn-success"
+            onclick="sellMilk()"
+          >
+            Sell One Unit
+          </button>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <section id="sales" class="sales-panel">
+
+      <h2>Record Sale — Training Example</h2>
+
+      <p>
+        Units Sold:
+        <strong id="salesCounter">0</strong>
+      </p>
+
+      <p>
+        Total Sales:
+        <strong id="salesTotal">0</strong>
+        EGP
+      </p>
+
+      <p id="saleMessage">
+        Click "Sell One Unit" for the desired product.
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    <p>Seller Dashboard — Session 1 Application</p>
+  </footer>
+
+</body>
+
+</html>
